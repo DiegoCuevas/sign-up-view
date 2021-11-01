@@ -2,7 +2,7 @@ import points from "../assets/img/logos/points.svg"
 import photo from "../assets/img/logos/photo.jpg"
 function Message() {
   return (
-    <div className="lg:h-message h-1/4 w-1/3 lg:w-message bg-quotes bg-no-repeat bg-t-rigth text-white py-6">
+    <div className="lg:h-message h-1/4 w-full lg:w-message bg-quotes bg-no-repeat bg-t-rigth text-white py-6">
       <p className="w-full lg:text-lg text-sm font-Karla tracking-wider text-center">
         CloudForecast succinctly <br /> highlights spikes in cost and areas{" "}
         <br /> which I should act upon right now <br /> in order to save money.
