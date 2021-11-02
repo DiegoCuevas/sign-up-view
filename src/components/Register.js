@@ -1,10 +1,11 @@
 import React from "react";
 import Message from "./Message.js";
 import Banner from "./banner.js";
-import circle from "../assets/img/logos/circle.svg"
-
+import circle from "../assets/img/logos/circle.svg";
+import mail from "../assets/img/logos/form/mail.svg"
+import key from "../assets/img/logos/form/key.svg"
+import check from "../assets/img/logos/form/check.svg"
 function Register() {
-   
   return (
     <div className="w-full min-h-screen bg-blue-img bg-50% bg-no-repeat ">
       <div className="w-full h-11/12 grid grid-cols-3 items-center">
@@ -16,40 +17,90 @@ function Register() {
                 Start your 30 days <br /> free trial{" "}
               </h1>
             </div>
+
             <div className="lg:w-input h-3/4 w-full flex flex-col">
-              <div className="h-input w-full mb-4 flex flex-col justify-center ">
+              <div className="relative w-full h-10 mb-6 flex border border-solid rounded-lg">
                 <input
-                  placeholder="email"
-                  className="h-full rounded-lg border border-solid"
-                  type="email"
-                  name="email"
                   id="email"
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                  className="peer px-4 h-full w-full rounded-lg placeholder-transparent focus:outline-none"
                 />
+
+                <label
+                  for="email"
+                  className="px-4 mb-1 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-400 peer-focus:text-sm"
+                >
+                  Email
+                </label>
+                <span className="flex items-center mx-4">
+                  <button
+                    type="submit"
+                    className=" focus:outline-none focus:shadow-outline"
+                  >
+                    <img src={mail} alt=""></img>
+                  </button>
+                </span>
               </div>
-              <div className="h-input w-full mb-4 flex flex-col justify-center ">
+              <div className="relative w-full h-10 mb-6 flex border border-solid rounded-lg">
                 <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  className="peer px-4 h-full w-full rounded-lg placeholder-transparent focus:outline-none"
                   placeholder="Password"
-                  className="h-full rounded-lg border border-solid"
-                  type="password"
-                  name="password"
                 />
+                <label
+                  for="password"
+                  className="px-4 mb-1 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-400 peer-focus:text-sm"
+                >
+                  Password
+                </label>
+                <span className="flex items-center mx-4">
+                  <button
+                    type="submit"
+                    className=" focus:outline-none focus:shadow-outline"
+                  >
+                    <img src={key} alt=""></img>
+                  </button>
+                </span>
               </div>
-              <div className="h-input w-full mb-4 flex flex-col justify-center ">
+              <div className="relative w-full h-10 mb-6 flex border border-solid rounded-lg">
                 <input
-                  placeholder="Confirm password"
-                  className="h-full rounded-lg border border-solid"
+                  id="ConfirmPassword"
                   type="password"
-                  name="password"
+                  name="ConfirmPassword"
+                  className="peer px-4 h-full w-full rounded-lg placeholder-transparent focus:outline-none"
+                  placeholder="Confirm Password"
                 />
+                <label
+                  for="ConfirmPassword"
+                  className="px-4 mb-1 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-400 peer-focus:text-sm"
+                >
+                  Confirm Password
+                </label>
+                <span className="flex items-center mx-4">
+                  <button
+                    type="submit"
+                    className=" focus:outline-none focus:shadow-outline"
+                  >
+                    <img src={check} alt=""></img>
+                  </button>
+                </span>
               </div>
-              <div className="h-input w-full mb-4 flex flex-col justify-center ">
-                <select className="h-full border border-solid">
+
+              <div className=" w-full h-10 mb-6 flex border border-solid rounded-lg px-4 ">
+                <select className="rounded-lg h-full w-full focus:outline-none appearance-none ">
+                  <option value="" className="" disabled selected hidden>
+                    How did you hear about us?
+                  </option>
                   <option value="">Google</option>
                   <option value="">Google</option>
                   <option value="">Google</option>
                 </select>
               </div>
-              <div className="h-input w-full mb-4 flex justify-center">
+              <div className="h-10 w-full mb-4 flex justify-center">
                 <button
                   className="w-full h-full bg-ligth-blue text-white rounded-md"
                   type="submit"
