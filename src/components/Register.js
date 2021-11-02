@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Message from "./Message.js";
 import Banner from "./banner.js";
 import circle from "../assets/img/logos/circle.svg";
-import mail from "../assets/img/logos/form/mail.svg"
-import key from "../assets/img/logos/form/key.svg"
-import check from "../assets/img/logos/form/check.svg"
+import mail from "../assets/img/logos/form/mail.svg";
+import key from "../assets/img/logos/form/key.svg";
+import check from "../assets/img/logos/form/check.svg";
+
+
+const options = ["google", "aea", "google2"]
 function Register() {
+  const [selectValue, setSelectValue] = useState("")
   return (
     <div className="w-full min-h-screen bg-blue-img bg-50% bg-no-repeat ">
       <div className="w-full h-11/12 grid grid-cols-3 items-center">
@@ -90,15 +94,55 @@ function Register() {
                 </span>
               </div>
 
-              <div className=" w-full h-10 mb-6 flex border border-solid rounded-lg px-4 ">
-                <select className="rounded-lg h-full w-full focus:outline-none appearance-none ">
-                  <option value="" className="" disabled selected hidden>
-                    How did you hear about us?
-                  </option>
-                  <option value="">Google</option>
-                  <option value="">Google</option>
-                  <option value="">Google</option>
-                </select>
+              <div className=" w-full h-10 mb-6 flex">
+                <div class="relative w-full">
+                  <div class="h-10 bg-white flex border border-solid rounded-lg items-center">
+                    <input
+                      value={selectValue}
+                      name="select"
+                      id="select"
+                      class="px-4 appearance-none outline-none text-gray-800 w-full"
+                    />
+
+                    <label
+                      for="show_more"
+                      class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-gray-600"
+                    >
+                      <svg
+                        class="w-4 h-4 mx-2 fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                      </svg>
+                    </label>
+                  </div>
+
+                  <input
+                    type="checkbox"
+                    name="show_more"
+                    id="show_more"
+                    class="hidden peer"
+                  />
+                  <div class="absolute rounded shadow bg-white overflow-hidden hidden peer-checked:flex flex-col w-full mt-1 border border-gray-200">
+                    {options.map((element) => {
+                      return (
+                        <div
+                          class="cursor-pointer group"
+                          onClick={() => setSelectValue(element)}
+                        >
+                          <div class="block p-2 border-transparent text-gray-400 group-hover:bg-gray-100">
+                            {element}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
               <div className="h-10 w-full mb-4 flex justify-center">
                 <button
