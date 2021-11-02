@@ -5,11 +5,11 @@ import circle from "../assets/img/logos/circle.svg";
 import mail from "../assets/img/logos/form/mail.svg";
 import key from "../assets/img/logos/form/key.svg";
 import check from "../assets/img/logos/form/check.svg";
+import selectLogo from "../assets/img/logos/form/select_logo.svg";
 
-
-const options = ["google", "google1", "google2"]
+const options = ["google", "google1", "google2"];
 function Register() {
-  const [selectValue, setSelectValue] = useState("")
+  const [selectValue, setSelectValue] = useState("");
   return (
     <div className="w-full min-h-screen bg-blue-img bg-50% bg-no-repeat ">
       <div className="w-full h-11/12 grid grid-cols-3 items-center">
@@ -96,29 +96,25 @@ function Register() {
 
               <div className=" w-full h-10 mb-6 flex">
                 <div class="relative w-full">
-                  <div class="h-10 bg-white flex border border-solid rounded-lg items-center">
+                  <div class="relative w-full h-10 flex items-center border border-solid rounded-lg">
                     <input
                       value={selectValue}
                       name="select"
                       id="select"
-                      class="px-4 appearance-none outline-none text-gray-800 w-full"
+                      className="peer px-4 h-full w-full rounded-lg placeholder-transparent focus:outline-none appearance-none outline-none"
+                      placeholder="How did you hear about us?"
                     />
-
                     <label
                       for="show_more"
-                      class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-gray-600"
+                      className="cursor-pointer outline-none focus:outline-none px-4 mb-1 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-400 peer-focus:text-sm"
                     >
-                      <svg
-                        class="w-4 h-4 mx-2 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="18 15 12 9 6 15"></polyline>
-                      </svg>
+                      How did you hear about us?
+                    </label>
+                    <label
+                      for="show_more"
+                      className="flex items-center mx-4 cursor-pointer outline-none focus:outline-none  transition-all w-10"
+                    >
+                      <img src={selectLogo} alt="" />
                     </label>
                   </div>
 
@@ -128,7 +124,7 @@ function Register() {
                     id="show_more"
                     class="hidden peer"
                   />
-                  <div class="absolute rounded shadow bg-white overflow-hidden hidden peer-checked:flex flex-col w-full mt-1 border border-gray-200">
+                  <div class="absolute rounded shadow bg-white overflow-hidden hidden peer-checked:flex flex-col w-full border border-gray-200">
                     {options.map((element) => {
                       return (
                         <div
