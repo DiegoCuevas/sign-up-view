@@ -7,7 +7,7 @@ import key from "../assets/img/logos/form/key.svg";
 import check from "../assets/img/logos/form/check.svg";
 
 
-const options = ["google", "aea", "google2"]
+const options = ["google", "google1", "google2"]
 function Register() {
   const [selectValue, setSelectValue] = useState("")
   return (
