@@ -1,5 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -35,7 +36,7 @@ module.exports = {
         message: "324px",
       },
       height: {
-        input: "55px",
+        input: "50px",
         card: "662px",
         message: "227px",
       },
