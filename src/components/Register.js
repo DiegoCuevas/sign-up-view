@@ -101,12 +101,13 @@ function Register() {
                       value={selectValue}
                       name="select"
                       id="select"
-                      className="peer px-4 h-full w-full rounded-lg placeholder-transparent focus:outline-none appearance-none outline-none"
+                      type="text"
+                      className="peer px-4 h-full w-full rounded-lg placeholder-transparent focus:outline-none text-gray-500 appearance-none outline-none"
                       placeholder="How did you hear about us?"
                     />
                     <label
                       for="show_more"
-                      className="cursor-pointer outline-none focus:outline-none px-4 mb-1 absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-400 peer-focus:text-sm"
+                      className="cursor-pointer outline-none focus:outline-none px-4 mb-1 absolute left-0 -top-3.5 text-gray-400 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-400 peer-focus:text-sm"
                     >
                       How did you hear about us?
                     </label>
