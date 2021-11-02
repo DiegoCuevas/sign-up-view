@@ -94,7 +94,7 @@ function Register() {
                 </span>
               </div>
 
-              <div className=" w-full h-10 mb-6 flex">
+              <div className="w-full h-10 mb-6 flex">
                 <div class="relative w-full">
                   <div class="relative w-full h-10 flex items-center border border-solid rounded-lg">
                     <input
@@ -113,7 +113,7 @@ function Register() {
                     </label>
                     <label
                       for="show_more"
-                      className="flex items-center mx-4 cursor-pointer outline-none focus:outline-none  transition-all w-10"
+                      className="items-center ml-6 cursor-pointer outline-none focus:outline-none  transition-all w-10"
                     >
                       <img src={selectLogo} alt="" />
                     </label>
